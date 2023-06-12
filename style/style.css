@@ -1,3 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+}
 
+body {
+  height: 2000px;
+}
+
+.information {
+  background-color: #2D2E2E;
+}
+.information .information--inner {
+  padding: 50px 20px 0;
+}
+.information .information--inner .information__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 2px solid #3F4040;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.information .information--inner .information__info .info__image {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+.information .information--inner .information__info .info__image .image__pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+.information .information--inner .information__info .info__name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.information .information--inner .information__info .info__name .name__fullName {
+  font-size: 4rem;
+  color: #A4A5A6;
+  margin-bottom: -20px;
+}
+.information .information--inner .information__info .info__name .name__fullName:last-child {
+  margin-bottom: 0;
+  color: #00ADB5;
+}
+.information .information--inner .information__info .info__contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.information .information--inner .information__info .info__contact .contact__carrier {
+  margin-bottom: 40px;
+}
+.information .information--inner .information__info .info__contact .contact__carrier .carrier__self {
+  font-size: 1.5rem;
+  color: #A4A5A6;
+  font-weight: 200;
+}
+.information .information--inner .information__info .info__contact .contact__social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.information .information--inner .information__info .info__contact .contact__social-media .social-media__tag {
+  width: 40px;
+  height: 40px;
+  background-color: #3F4040;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color, background-color 0.3s ease;
+}
+.information .information--inner .information__info .info__contact .contact__social-media .social-media__tag .tag__self {
+  font-size: 2rem;
+  color: #717273;
+}
+.information .information--inner .information__info .info__contact .contact__social-media .social-media__tag:hover {
+  border: 3px solid #3F4040;
+  background-color: #2D2E2E;
+}
+.information .information--inner .information__info .info__contact .contact__social-media .social-media__tag:hover .tag__self {
+  color: #00ADB5;
+}
+.information .information--inner .information__about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.information .information--inner .information__about .about__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.information .information--inner .information__about .about__info .info__title {
+  font-size: 1.4rem;
+  color: #A4A5A6;
+  margin-bottom: 10px;
+}
+.information .information--inner .information__about .about__info .info__text {
+  font-size: 1.2rem;
+  color: #A4A5A6;
+  font-weight: 300;
+}
+
+.intro .intro__title {
+  border-top: 1px solid #3F4040;
+  border-bottom: 1px solid #3F4040;
+  background-color: #292A2A;
+  padding: 30px 20px;
+}
+.intro .intro__title .title__self {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.intro .intro__title .title__self .self__text {
+  font-size: 1.8rem;
+  color: #A4A5A6;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.intro .intro__title .title__self .self__description {
+  font-size: 1.4rem;
+  color: #A4A5A6;
+  font-weight: 300;
+}
+.intro .intro__paragraph {
+  background-color: #2D2E2E;
+  padding: 30px 20px;
+}
+.intro .intro__paragraph .paragraph__text {
+  font-size: 1.3rem;
+  line-height: 26px;
+  color: #A4A5A6;
+  font-weight: 300;
+}
+
+.expertise .expertise__title {
+  border-top: 1px solid #3F4040;
+  border-bottom: 1px solid #3F4040;
+  background-color: #292A2A;
+  padding: 30px 20px;
+}
+.expertise .expertise__title .title__self {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.expertise .expertise__title .title__self .self__text {
+  font-size: 1.8rem;
+  color: #A4A5A6;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.expertise .expertise__title .title__self .self__description {
+  font-size: 1.4rem;
+  color: #A4A5A6;
+  font-weight: 300;
+}
+.expertise .expertise__data {
+  padding: 30px 20px;
+  background-color: #2D2E2E;
+  display: flex;
+  flex-wrap: wrap;
+}
+.expertise .expertise__data .data__info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.expertise .expertise__data .data__info .info__number {
+  color: #00ADB5;
+  font-size: 1.8rem;
+  margin-right: 20px;
+  font-weight: 500;
+}
+.expertise .expertise__data .data__info .info__text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.expertise .expertise__data .data__info .info__text .text__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #A4A5A6;
+  margin-bottom: 10px;
+}
+.expertise .expertise__data .data__info .info__text .text__description {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 24px;
+  color: #A4A5A6;
+}
+.expertise .expertise__data .data__info:last-child {
+  margin-bottom: 0;
+}
+
+.skill .skill__title {
+  border-top: 1px solid #3F4040;
+  border-bottom: 1px solid #3F4040;
+  background-color: #292A2A;
+  padding: 30px 20px;
+}
+.skill .skill__title .title__self {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.skill .skill__title .title__self .self__text {
+  font-size: 1.8rem;
+  color: #A4A5A6;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.skill .skill__title .title__self .self__description {
+  font-size: 1.4rem;
+  color: #A4A5A6;
+  font-weight: 300;
+}
 
 /*# sourceMappingURL=style.css.map */

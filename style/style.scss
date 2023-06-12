@@ -1,2 +1,276 @@
-@import "./root";
+//root
+$black: #000;
+$white: #fff;
+$cyan: #00ADB5;
 
+$darkest: #292A2A;
+$darker: #2B2C2C;
+$dark: #2D2E2E;
+$light-dark: #3F4040;
+
+$dark-gray: #717273;
+$gray: #A4A5A6;
+$light-gray: #EEEEEE;
+
+//mixin
+@mixin title {
+  border-top: 1px solid $light-dark;
+  border-bottom: 1px solid $light-dark;
+  background-color: $darkest;
+  padding: 30px 20px;
+}
+
+@mixin underTitle {
+
+  .title__self {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    .self__text {
+      font-size: 1.8rem;
+      color: $gray;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .self__description {
+      font-size: 1.4rem;
+      color: $gray;
+      font-weight: 300;
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-size: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 2000px;
+}
+
+.information {
+  background-color: $dark;
+
+  .information--inner {
+    padding: 50px 20px 0;
+
+    .information__info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-bottom: 2px solid $light-dark;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+
+      .info__image {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+
+        .image__pic {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+
+      .info__name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        .name__fullName {
+          font-size: 4rem;
+          color: $gray;
+          margin-bottom: -20px;
+
+          &:last-child {
+            margin-bottom: 0;
+            color: $cyan;
+          }
+        }
+      }
+
+      .info__contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .contact__carrier {
+          margin-bottom: 40px;
+
+          .carrier__self {
+            font-size: 1.5rem;
+            color: $gray;
+            font-weight: 200;
+          }
+        }
+
+        .contact__social-media {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .social-media__tag {
+            width: 40px;
+            height: 40px;
+            background-color: $light-dark;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: color, background-color 0.3s ease;
+
+            .tag__self {
+              font-size: 2rem;
+              color: $dark-gray;
+            }
+
+            &:hover {
+              border: 3px solid $light-dark;
+              background-color: $dark;
+            }
+
+            &:hover .tag__self {
+              color: $cyan;
+            }
+          }
+        }
+      }
+    }
+
+    .information__about {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .about__info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        .info__title {
+          font-size: 1.4rem;
+          color: $gray;
+          margin-bottom: 10px;
+        }
+
+        .info__text {
+          font-size: 1.2rem;
+          color: $gray;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+.intro {
+
+  .intro__title {
+    @include title();
+
+    @include underTitle();
+  }
+
+  .intro__paragraph {
+    background-color: $dark;
+    padding: 30px 20px;
+
+    .paragraph__text {
+      font-size: 1.3rem;
+      line-height: 26px;
+      color: #A4A5A6;
+      font-weight: 300;
+    }
+  }
+}
+
+.expertise {
+
+  .expertise__title {
+    @include title();
+
+    @include underTitle();
+  }
+
+  .expertise__data {
+    padding: 30px 20px;
+    background-color: $dark;
+    display: flex;
+    flex-wrap: wrap;
+
+    .data__info {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 20px;
+      width: 100%;
+
+      .info__number {
+        color: $cyan;
+        font-size: 1.8rem;
+        margin-right: 20px;
+        font-weight: 500;
+      }
+
+      .info__text {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        .text__title {
+          font-size: 1.8rem;
+          font-weight: 500;
+          color: $gray;
+          margin-bottom: 10px;
+        }
+
+        .text__description {
+          font-size: 1.2rem;
+          font-weight: 300;
+          line-height: 24px;
+          color: $gray;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.skill {
+
+  .skill__title {
+    @include title();
+
+    @include underTitle();
+  }
+
+  .skill__progress {
+
+  }
+}
