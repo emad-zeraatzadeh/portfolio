@@ -242,5 +242,239 @@ body {
   color: #A4A5A6;
   font-weight: 300;
 }
+.skill .skill__progress {
+  padding: 30px 20px;
+  background-color: #2D2E2E;
+}
+.skill .skill__progress .section__title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.skill .skill__progress .section__title .title__number {
+  color: #00ADB5;
+  font-size: 1.8rem;
+  margin-right: 18px;
+  font-weight: 500;
+}
+.skill .skill__progress .section__title .title__text {
+  color: #A4A5A6;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.skill .skill__progress .section__bar {
+  margin-bottom: 20px;
+}
+.skill .skill__progress .section__bar .bar__self {
+  position: relative;
+  height: 5px;
+  width: 100%;
+  background-color: #3F4040;
+}
+.skill .skill__progress .section__bar .bar__self:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  height: 5px;
+  background-color: #00ADB5;
+}
+
+.experience .experience__title {
+  border-top: 1px solid #3F4040;
+  border-bottom: 1px solid #3F4040;
+  background-color: #292A2A;
+  padding: 30px 20px;
+}
+.experience .experience__title .title__self {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.experience .experience__title .title__self .self__text {
+  font-size: 1.8rem;
+  color: #A4A5A6;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.experience .experience__title .title__self .self__description {
+  font-size: 1.4rem;
+  color: #A4A5A6;
+  font-weight: 300;
+}
+.experience .experience__data {
+  background-color: #2D2E2E;
+  padding: 30px 20px;
+}
+.experience .experience__data .data__info {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 25px;
+}
+.experience .experience__data .data__info .info__self {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.experience .experience__data .data__info .info__self .self__date {
+  color: #717273;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.experience .experience__data .data__info .info__self .self__company {
+  color: #A4A5A6;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.experience .experience__data .data__info .info__self .self__job {
+  color: #A4A5A6;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.experience .experience__data .data__info .info__self .self__location {
+  color: #717273;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.experience .experience__data .data__info .info__description .description__text {
+  color: #A4A5A6;
+  font-size: 1.3rem;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.experience .experience__data .data__info .info__ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.experience .experience__data .data__info .info__ball .ball__self {
+  width: 10px;
+  height: 10px;
+  color: #00ADB5;
+}
+.experience .experience__data .data__info:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(4px, 20px);
+  width: 2px;
+  height: 100%;
+  background-color: #3F4040;
+}
+.experience .experience__data .data__info--last:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(4px, 20px);
+  width: 2px;
+  height: 158%;
+  background-color: #3F4040;
+}
+
+.education .education__title {
+  border-top: 1px solid #3F4040;
+  border-bottom: 1px solid #3F4040;
+  background-color: #292A2A;
+  padding: 30px 20px;
+  position: relative;
+}
+.education .education__title .title__self {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.education .education__title .title__self .self__text {
+  font-size: 1.8rem;
+  color: #A4A5A6;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.education .education__title .title__self .self__description {
+  font-size: 1.4rem;
+  color: #A4A5A6;
+  font-weight: 300;
+}
+.education .education__data {
+  background-color: #2D2E2E;
+  padding: 30px 20px;
+}
+.education .education__data .data__info {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 25px;
+}
+.education .education__data .data__info .info__self {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.education .education__data .data__info .info__self .self__date {
+  color: #717273;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.education .education__data .data__info .info__self .self__company {
+  color: #A4A5A6;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.education .education__data .data__info .info__self .self__job {
+  color: #A4A5A6;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.education .education__data .data__info .info__self .self__location {
+  color: #717273;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.education .education__data .data__info .info__description .description__text {
+  color: #A4A5A6;
+  font-size: 1.3rem;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.education .education__data .data__info .info__ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.education .education__data .data__info .info__ball .ball__self {
+  width: 10px;
+  height: 10px;
+  color: #00ADB5;
+}
+.education .education__data .data__info:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(4px, 20px);
+  width: 2px;
+  height: 100%;
+  background-color: #3F4040;
+}
+.education .education__data .data__info--last {
+  position: relative;
+}
+.education .education__data .data__info--last:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-4px, 20px);
+  height: 2px;
+  width: 20px;
+  background-color: #3F4040;
+}
 
 /*# sourceMappingURL=style.css.map */
