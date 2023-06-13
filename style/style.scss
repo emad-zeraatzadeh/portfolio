@@ -43,6 +43,10 @@ $light-gray: #EEEEEE;
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -57,6 +61,7 @@ body {
   height: 2000px;
 }
 
+//information
 .information {
   background-color: $dark;
 
@@ -185,6 +190,7 @@ body {
   }
 }
 
+//intro
 .intro {
 
   .intro__title {
@@ -206,6 +212,7 @@ body {
   }
 }
 
+//expertise
 .expertise {
 
   .expertise__title {
@@ -262,6 +269,7 @@ body {
   }
 }
 
+//skill
 .skill {
 
   .skill__title {
@@ -318,6 +326,7 @@ body {
   }
 }
 
+//experience
 .experience {
 
   .experience__title {
@@ -416,6 +425,7 @@ body {
   }
 }
 
+//education
 .education {
 
   .education__title {
@@ -511,6 +521,111 @@ body {
         height: 2px;
         width: 20px;
         background-color: $light-dark;
+      }
+    }
+  }
+}
+
+//profiles
+.profiles {
+
+  .profiles__title {
+    @include title();
+
+    @include underTitle();
+  }
+
+  .profiles__data {
+    background-color: $dark;
+    padding: 30px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    .data__activity {
+      display: flex;
+      align-items: baseline;
+      justify-content: flex-start;
+      margin-bottom: 30px;
+
+      .activity__logo {
+        margin-right: 20px;
+
+        .logo__pic {
+
+          .pic__self {
+            color: $dark-gray;
+            font-size: 2rem;
+            transition: 0.2s ease;
+            cursor: pointer;
+
+            &:hover {
+              color: $cyan;
+            }
+          }
+        }
+      }
+
+      .activity__text {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        .text__title {
+          color: $cyan;
+          font-size: 2rem;
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+
+        .text__description {
+          color: $gray;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+//contact
+.contact {
+
+  .contact__title {
+    @include title();
+
+    @include underTitle();
+  }
+
+  .contact__data {
+    background-color: $dark;
+    padding: 30px 20px;
+
+    .data__about {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+
+      .about__info {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        .info__title {
+          font-size: 1.4rem;
+          color: $gray;
+          margin-bottom: 10px;
+        }
+
+        .info__text {
+          font-size: 1.2rem;
+          color: $gray;
+          font-weight: 300;
+        }
       }
     }
   }
