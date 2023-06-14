@@ -841,5 +841,115 @@ body {
 
 @media (min-width: 760px) {
 
+  .information {
 
+    .information--inner {
+      padding: 50px 50px 0;
+
+      .information__about {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        .about__info {
+          align-items: flex-start;
+          width: fit-content;
+        }
+      }
+    }
+  }
+
+  .intro {
+
+    .intro__title {
+      padding: 30px 50px;
+    }
+
+    .intro__paragraph {
+      padding: 30px 50px;
+    }
+  }
+
+  .expertise {
+
+    .expertise__title {
+      padding: 30px 50px;
+    }
+
+    .expertise__data {
+      padding: 30px 50px;
+    }
+  }
+
+  .skill {
+
+    .skill__title {
+      padding: 30px 50px;
+    }
+
+    .skill__progress {
+      padding: 30px 50px;
+    }
+  }
+
+  .experience {
+
+    .experience__title {
+      padding: 30px 50px;
+    }
+
+    .experience__data {
+      padding: 30px 50px;
+
+      .data__info--last {
+
+        &:before {
+          height: 196%;
+        }
+      }
+    }
+  }
+
+  .education {
+
+    .education__title {
+      padding: 30px 50px;
+    }
+
+    .education__data {
+      padding: 30px 50px;
+    }
+  }
+
+  .profiles {
+
+    .profiles__title {
+      padding: 30px 50px;
+    }
+
+    .profiles__data {
+      padding: 30px 50px;
+    }
+  }
+
+  .contact {
+
+    .contact__title {
+      padding: 30px 50px;
+    }
+
+    .contact__data {
+      padding: 30px 50px;
+
+      .data__about {
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        .about__info {
+          align-items: flex-start;
+          width: fit-content;
+        }
+      }
+    }
+  }
 }
