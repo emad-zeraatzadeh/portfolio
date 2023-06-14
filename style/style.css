@@ -22,53 +22,56 @@ body {
 .information .information--inner {
   padding: 50px 20px 0;
 }
-.information .information--inner .information__info {
+.information .information--inner .information__image {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  border-bottom: 2px solid #3F4040;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-}
-.information .information--inner .information__info .info__image {
-  width: 150px;
-  height: 150px;
   margin-bottom: 20px;
 }
-.information .information--inner .information__info .info__image .image__pic {
+.information .information--inner .information__image .image__pic {
+  width: 150px;
+  height: 150px;
+}
+.information .information--inner .information__image .image__pic .pic__self {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
   object-position: top;
 }
-.information .information--inner .information__info .info__name {
+.information .information--inner .information__info {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 20px;
-}
-.information .information--inner .information__info .info__name .name__fullName {
-  font-size: 4rem;
-  color: #A4A5A6;
-  margin-bottom: -20px;
-}
-.information .information--inner .information__info .info__name .name__fullName:last-child {
-  margin-bottom: 0;
-  color: #00ADB5;
 }
 .information .information--inner .information__info .info__contact {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border-bottom: 3px solid #3F4040;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  width: 100%;
 }
-.information .information--inner .information__info .info__contact .contact__carrier {
+.information .information--inner .information__info .info__contact .contact__name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin-bottom: 40px;
 }
-.information .information--inner .information__info .info__contact .contact__carrier .carrier__self {
+.information .information--inner .information__info .info__contact .contact__name .name__fullName {
+  font-size: 4rem;
+  color: #A4A5A6;
+  margin-bottom: -20px;
+}
+.information .information--inner .information__info .info__contact .contact__name .name__fullName--cyan {
+  color: #00ADB5;
+  margin-bottom: 0;
+}
+.information .information--inner .information__info .info__contact .contact__name .name__carrier {
   font-size: 1.5rem;
   color: #A4A5A6;
   font-weight: 200;
@@ -101,26 +104,27 @@ body {
 .information .information--inner .information__info .info__contact .contact__social-media .social-media__tag:hover .tag__self {
   color: #00ADB5;
 }
-.information .information--inner .information__about {
+.information .information--inner .information__info .info__about {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
-.information .information--inner .information__about .about__info {
+.information .information--inner .information__info .info__about .about__info {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-bottom: 40px;
 }
-.information .information--inner .information__about .about__info .info__title {
+.information .information--inner .information__info .info__about .about__info .info__title {
   font-size: 1.4rem;
   color: #A4A5A6;
   margin-bottom: 10px;
   font-weight: 500;
 }
-.information .information--inner .information__about .about__info .info__text {
+.information .information--inner .information__info .info__about .about__info .info__text {
   font-size: 1.2rem;
   color: #A4A5A6;
   font-weight: 300;
@@ -672,11 +676,11 @@ body {
 }
 
 @media (min-width: 600px) {
-  .information .information--inner .information__about {
+  .information .information--inner .information__info .info__about {
     flex-direction: row;
-    flex-wrap: wrap;
+    width: 100%;
   }
-  .information .information--inner .information__about .about__info {
+  .information .information--inner .information__info .info__about .about__info {
     width: 50%;
   }
   .intro .intro__paragraph .paragraph__text {
@@ -735,11 +739,10 @@ body {
   .information .information--inner {
     padding: 50px 50px 0;
   }
-  .information .information--inner .information__about {
-    flex-wrap: nowrap;
+  .information .information--inner .information__info .info__about {
     justify-content: space-between;
   }
-  .information .information--inner .information__about .about__info {
+  .information .information--inner .information__info .info__about .about__info {
     align-items: flex-start;
     width: fit-content;
   }
