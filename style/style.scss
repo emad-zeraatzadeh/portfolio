@@ -178,6 +178,7 @@ body {
           font-size: 1.4rem;
           color: $gray;
           margin-bottom: 10px;
+          font-weight: 500;
         }
 
         .info__text {
@@ -241,7 +242,7 @@ body {
     .data__info {
       display: flex;
       align-items: flex-start;
-      justify-content: center;
+      justify-content: flex-start;
       margin-bottom: 20px;
       width: 100%;
 
@@ -292,71 +293,85 @@ body {
   .skill__progress {
     padding: 30px 20px;
     background-color: $dark;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 
-    .section__title {
+    .progress__section {
       display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin-bottom: 10px;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
 
-      .title__number {
-        color: $cyan;
-        font-size: 1.8rem;
-        margin-right: 18px;
-        font-weight: 500;
+      .section__title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+
+        .title__number {
+          color: $cyan;
+          font-size: 1.8rem;
+          margin-right: 18px;
+          font-weight: 500;
+        }
+
+        .title__text {
+          color: $gray;
+          font-size: 1.8rem;
+          font-weight: 500;
+        }
       }
 
-      .title__text {
-        color: $gray;
-        font-size: 1.8rem;
-        font-weight: 500;
-      }
-    }
-
-    .section__bar {
-      margin-bottom: 20px;
-
-      .bar__main {
-        position: relative;
-        height: 5px;
+      .section__bar {
+        margin-bottom: 20px;
         width: 100%;
-        background-color: $light-dark;
 
-        .bar__progress {
-          position: absolute;
-          top: 0;
-          left: 0;
+        .bar__main {
+          position: relative;
           height: 5px;
-          width: 80%;
-          background-color: $cyan;
-        }
+          width: 100%;
+          background-color: $light-dark;
 
-        .bar__progress[data-progress="80%"] {
-          width: 80%;
-        }
+          .bar__progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 5px;
+            width: 80%;
+            background-color: $cyan;
+          }
 
-        .bar__progress[data-progress="70%"] {
-          width: 70%;
-        }
+          .bar__progress[data-progress="80%"] {
+            width: 80%;
+          }
 
-        .bar__progress[data-progress="65%"] {
-          width: 65%;
-        }
+          .bar__progress[data-progress="70%"] {
+            width: 70%;
+          }
 
-        .bar__progress[data-progress="40%"] {
-          width: 40%;
-        }
+          .bar__progress[data-progress="65%"] {
+            width: 65%;
+          }
 
-        .bar__progress[data-progress="65%"] {
-          width: 65%;
-        }
+          .bar__progress[data-progress="40%"] {
+            width: 40%;
+          }
 
-        .bar__progress[data-progress="55%"] {
-          width: 55%;
-        }
+          .bar__progress[data-progress="65%"] {
+            width: 65%;
+          }
 
-        .bar__progress[data-progress="70%"] {
-          width: 70%;
+          .bar__progress[data-progress="55%"] {
+            width: 55%;
+          }
+
+          .bar__progress[data-progress="70%"] {
+            width: 70%;
+          }
         }
       }
     }
@@ -663,6 +678,112 @@ body {
           color: $gray;
           font-weight: 300;
         }
+      }
+    }
+  }
+}
+
+//helper materials
+.arrow {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translate(-50%, -50%);
+
+  .arrow__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $light-dark;
+    transition: background-color 0.2s ease;
+
+    .link__icon {
+      font-size: 2rem;
+      color: $gray;
+      transition: 0.2s ease;
+    }
+
+    &:hover {
+      border: 3px solid $light-dark;
+      background-color: $dark;
+    }
+
+    &:hover .link__icon {
+      color: $cyan;
+    }
+  }
+}
+
+//media queries
+@media (min-width: 600px) {
+
+  .information {
+
+    .information--inner {
+
+      .information__about {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .about__info {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  .intro {
+
+    .intro__paragraph {
+
+      .paragraph__text {
+        font-size: 1.8rem;
+        line-height: 30px;
+
+        .text__tel {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  .expertise {
+
+    .expertise__data {
+
+      .data__info {
+        width: 50%;
+      }
+
+      .data__info--padding--r {
+        padding-right: 20px;
+      }
+
+      .data__info--padding--l {
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .skill {
+
+    .skill__progress {
+      flex-direction: row;
+
+      .progress__section {
+        width: 50%;
+
+      }
+
+      .progress__section--padding--r {
+        padding-right: 20px;
+      }
+
+      .progress__section--padding--l {
+        padding-left: 20px;
       }
     }
   }
