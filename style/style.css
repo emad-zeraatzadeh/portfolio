@@ -357,9 +357,9 @@ body {
   padding: 30px 20px;
 }
 .experience .experience__data .data__info {
-  position: relative;
   padding-left: 30px;
   margin-bottom: 25px;
+  position: relative;
 }
 .experience .experience__data .data__info .info__self {
   display: flex;
@@ -410,7 +410,7 @@ body {
   left: 0;
   transform: translate(4px, 20px);
   width: 2px;
-  height: 100%;
+  height: 158%;
   background-color: #3F4040;
 }
 .experience .experience__data .data__info--last:before {
@@ -553,6 +553,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .profiles .profiles__data .data__activity {
   display: flex;
@@ -621,6 +622,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .contact .contact__data .data__about .about__info {
   display: flex;
@@ -704,6 +706,29 @@ body {
   }
   .skill .skill__progress .progress__section--padding--l {
     padding-left: 20px;
+  }
+  .experience .experience__data .data__info--last:before {
+    height: 185%;
+  }
+  .profiles .profiles__data {
+    flex-direction: row;
+  }
+  .profiles .profiles__data .data__activity {
+    width: 50%;
+  }
+  .profiles .profiles__data .data__activity--padding-l {
+    padding-left: 20px;
+  }
+  .profiles .profiles__data .data__activity--padding-r {
+    padding-right: 20px;
+  }
+  .contact .contact__data .data__about {
+    flex-direction: row;
+  }
+  .contact .contact__data .data__about .about__info {
+    align-items: center;
+    justify-content: center;
+    width: 50%;
   }
 }
 
