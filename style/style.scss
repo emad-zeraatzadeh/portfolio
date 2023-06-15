@@ -12,6 +12,10 @@ $dark-gray: #717273;
 $gray: #A4A5A6;
 $light-gray: #EEEEEE;
 
+
+$lighter: #FBFBFB;
+$light: #FCFCFC;
+
 //mixin
 @mixin title {
   border-top: 1px solid $light-dark;
@@ -723,6 +727,50 @@ body {
   }
 }
 
+.switch {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  transform: translate(50%, -50%);
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: $gray;
+  cursor: pointer;
+
+  .switch__round {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: $darkest;
+    border-radius: 50%;
+    top: 50%;
+    right: 0;
+    transform: translate(-5px, -50%);
+  }
+
+  .switch__round--active {
+    left: 0;
+    transform: translate(5px, -50%);
+  }
+
+  .switch__fake {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 50%;
+    left: 0;
+    transform: translate(20px, -50%);
+    display: none;
+  }
+
+  .switch__fake--active {
+    display: block;
+  }
+}
+
 //media queries
 @media (min-width: 600px) {
 
@@ -965,7 +1013,7 @@ body {
 
 @media (min-width: 1024px) {
 
-  .information  {
+  .information {
 
     .information--inner {
       display: flex;
@@ -1219,6 +1267,16 @@ body {
     .contact__data {
       background-color: $darker;
       flex: 3;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .profiles {
+
+    .profiles__data {
+
     }
   }
 }

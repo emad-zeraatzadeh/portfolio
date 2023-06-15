@@ -675,6 +675,46 @@ body {
   color: #00ADB5;
 }
 
+.switch {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  transform: translate(50%, -50%);
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #A4A5A6;
+  cursor: pointer;
+}
+.switch .switch__round {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: #292A2A;
+  border-radius: 50%;
+  top: 50%;
+  right: 0;
+  transform: translate(-5px, -50%);
+}
+.switch .switch__round--active {
+  left: 0;
+  transform: translate(5px, -50%);
+}
+.switch .switch__fake {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  left: 0;
+  transform: translate(20px, -50%);
+  display: none;
+}
+.switch .switch__fake--active {
+  display: block;
+}
+
 @media (min-width: 600px) {
   .information .information--inner .information__info .info__about {
     flex-direction: row;
