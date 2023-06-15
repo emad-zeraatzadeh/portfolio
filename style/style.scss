@@ -965,4 +965,260 @@ body {
 
 @media (min-width: 1024px) {
 
+  .information  {
+
+    .information--inner {
+      display: flex;
+      padding: 0;
+
+      .information__image {
+        display: flex;
+        align-items: center;
+        background-color: $darker;
+        flex: 1;
+        margin-bottom: 0;
+        padding: 30px 50px;
+
+        .image__pic {
+          width: 200px;
+          height: 200px;
+
+          .pic__self {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+          }
+        }
+      }
+
+      .information__info {
+        flex: 3;
+        padding: 200px 50px 0;
+
+        .info__contact {
+          justify-content: space-between;
+          align-items: flex-end;
+          flex-direction: row;
+          margin-bottom: 60px;
+          padding-bottom: 60px;
+
+          .contact__name {
+            align-items: flex-start;
+            margin-bottom: 0;
+
+            .name__fullName--cyan {
+              color: $cyan;
+              margin-bottom: 20px;
+            }
+          }
+
+          .contact__social-media {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .social-media__tag {
+              width: 40px;
+              height: 40px;
+              background-color: $light-dark;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-left: 10px;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: color, background-color 0.3s ease;
+
+              .tag__self {
+                font-size: 2rem;
+                color: $dark-gray;
+              }
+
+              &:hover {
+                border: 3px solid $light-dark;
+                background-color: $dark;
+              }
+
+              &:hover .tag__self {
+                color: $cyan;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .intro {
+    display: flex;
+    position: relative;
+
+    .intro__title {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      border: none;
+      flex: 1;
+
+      .title__self {
+        align-items: flex-end;
+      }
+    }
+
+    .intro__paragraph {
+      background-color: $darker;
+      flex: 3;
+
+      .paragraph__text {
+        font-size: 1.5rem;
+        line-height: 30px;
+
+        .text__tel {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .expertise {
+    display: flex;
+
+    .expertise__title {
+      background-color: $darker;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex: 1;
+      border: none;
+
+      .title__self {
+        align-items: flex-end;
+      }
+    }
+
+    .expertise__data {
+      flex: 3;
+      background-color: $dark;
+    }
+  }
+
+  .skill {
+    display: flex;
+
+    .skill__title {
+      background-color: $darkest;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex: 1;
+      border: none;
+
+      .title__self {
+        align-items: flex-end;
+      }
+    }
+
+    .skill__progress {
+      background-color: $darker;
+      flex: 3;
+    }
+  }
+
+  .experience {
+    display: flex;
+
+    .experience__title {
+      background-color: $darker;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex: 1;
+      border: none;
+
+      .title__self {
+        align-items: flex-end;
+      }
+    }
+
+    .experience__data {
+      background-color: $dark;
+      flex: 3;
+
+      .data__info--last {
+
+        &:before {
+          height: 132%;
+        }
+      }
+    }
+  }
+
+  .education {
+    display: flex;
+
+    .education__title {
+      background-color: $darkest;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex: 1;
+      border: none;
+
+      .title__self {
+        align-items: flex-end;
+      }
+    }
+
+    .education__data {
+      background-color: $darker;
+      flex: 3;
+    }
+  }
+
+  .profiles {
+    display: flex;
+
+    .profiles__title {
+      background-color: $darker;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex: 1;
+      border: none;
+
+      .title__self {
+        align-items: flex-end;
+      }
+    }
+
+    .profiles__data {
+      background-color: $dark;
+      flex: 3;
+    }
+  }
+
+  .contact {
+    display: flex;
+
+    .contact__title {
+      background-color: $darkest;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex: 1;
+      border: none;
+
+      .title__self {
+        align-items: flex-end;
+      }
+    }
+
+    .contact__data {
+      background-color: $darker;
+      flex: 3;
+    }
+  }
 }
