@@ -1,51 +1,4 @@
-//root
-$black: #000;
-$white: #fff;
-$cyan: #00ADB5;
-
-$darkest: #292A2A;
-$darker: #2B2C2C;
-$dark: #2D2E2E;
-$light-dark: #3F4040;
-
-$dark-gray: #717273;
-$gray: #A4A5A6;
-$light-gray: #EEEEEE;
-
-
-$lighter: #FBFBFB;
-$light: #FCFCFC;
-
-//mixin
-@mixin title {
-  border-top: 1px solid $light-dark;
-  border-bottom: 1px solid $light-dark;
-  background-color: $darkest;
-  padding: 30px 20px;
-}
-
-@mixin underTitle {
-
-  .title__self {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-
-    .self__text {
-      font-size: 1.8rem;
-      color: $gray;
-      margin-bottom: 10px;
-      font-weight: 500;
-    }
-
-    .self__description {
-      font-size: 1.4rem;
-      color: $gray;
-      font-weight: 300;
-    }
-  }
-}
+@import "_variables.scss";
 
 html {
   scroll-behavior: smooth;
@@ -97,6 +50,7 @@ body {
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      background-color: $dark;
 
       .info__contact {
         display: flex;
@@ -740,8 +694,8 @@ body {
 
   .switch__round {
     position: absolute;
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
     background-color: $darkest;
     border-radius: 50%;
     top: 50%;
@@ -756,19 +710,25 @@ body {
 
   .switch__fake {
     position: absolute;
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #A4A5A6;
     top: 50%;
     left: 0;
-    transform: translate(20px, -50%);
+    transform: translate(16px, -50%);
     display: none;
   }
 
   .switch__fake--active {
     display: block;
   }
+}
+
+.dark-theme {
+  $dark: #fff;
+  $darker: #FBFBFB;
+  $darkest: #F8F8F8;
 }
 
 //media queries
@@ -1061,41 +1021,7 @@ body {
               margin-bottom: 20px;
             }
           }
-
-          .contact__social-media {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .social-media__tag {
-              width: 40px;
-              height: 40px;
-              background-color: $light-dark;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin-left: 10px;
-              border-radius: 5px;
-              cursor: pointer;
-              transition: color, background-color 0.3s ease;
-
-              .tag__self {
-                font-size: 2rem;
-                color: $dark-gray;
-              }
-
-              &:hover {
-                border: 3px solid $light-dark;
-                background-color: $dark;
-              }
-
-              &:hover .tag__self {
-                color: $cyan;
-              }
-            }
-          }
         }
-
       }
     }
   }

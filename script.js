@@ -4,6 +4,7 @@ const fake = document.querySelector(".switch__fake");
 
 darkLight.addEventListener("click", () => {
     round.classList.toggle("switch__round--active");
-    fake.classList.toggle("switch__fake--active")
+    fake.classList.toggle("switch__fake--active");
+    document.body.classList.toggle("dark-theme");
 })
 

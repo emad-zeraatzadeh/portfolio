@@ -1,0 +1,50 @@
+//root
+
+$black: #000;
+$white: #fff;
+$cyan: #00ADB5;
+
+$darkest: #292A2A;
+$darker: #2B2C2C;
+$dark: #2D2E2E;
+$light-dark: #3F4040;
+
+$dark-gray: #717273;
+$gray: #A4A5A6;
+$light-gray: #EEEEEE;
+
+$light-gray: #C6C6C6;
+$dark-light: #F8F8F8;
+$lighter: #FBFBFB;
+$light: #FCFCFC;
+
+//mixin
+@mixin title {
+  border-top: 1px solid $light-dark;
+  border-bottom: 1px solid $light-dark;
+  background-color: $darkest;
+  padding: 30px 20px;
+}
+
+@mixin underTitle {
+
+  .title__self {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    .self__text {
+      font-size: 1.8rem;
+      color: $gray;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .self__description {
+      font-size: 1.4rem;
+      color: $gray;
+      font-weight: 300;
+    }
+  }
+}

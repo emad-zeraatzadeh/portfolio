@@ -44,6 +44,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: #2D2E2E;
 }
 .information .information--inner .information__info .info__contact {
   display: flex;
@@ -170,7 +171,7 @@ body {
   transition: 0.2s ease;
 }
 .intro .intro__paragraph .paragraph__text .text__tel:hover {
-  color: #EEEEEE;
+  color: #C6C6C6;
 }
 
 .expertise .expertise__title {
@@ -688,8 +689,8 @@ body {
 }
 .switch .switch__round {
   position: absolute;
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
   background-color: #292A2A;
   border-radius: 50%;
   top: 50%;
@@ -702,13 +703,13 @@ body {
 }
 .switch .switch__fake {
   position: absolute;
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #A4A5A6;
   top: 50%;
   left: 0;
-  transform: translate(20px, -50%);
+  transform: translate(16px, -50%);
   display: none;
 }
 .switch .switch__fake--active {
@@ -883,34 +884,6 @@ body {
   .information .information--inner .information__info .info__contact .contact__name .name__fullName--cyan {
     color: #00ADB5;
     margin-bottom: 20px;
-  }
-  .information .information--inner .information__info .info__contact .contact__social-media {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .information .information--inner .information__info .info__contact .contact__social-media .social-media__tag {
-    width: 40px;
-    height: 40px;
-    background-color: #3F4040;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: color, background-color 0.3s ease;
-  }
-  .information .information--inner .information__info .info__contact .contact__social-media .social-media__tag .tag__self {
-    font-size: 2rem;
-    color: #717273;
-  }
-  .information .information--inner .information__info .info__contact .contact__social-media .social-media__tag:hover {
-    border: 3px solid #3F4040;
-    background-color: #2D2E2E;
-  }
-  .information .information--inner .information__info .info__contact .contact__social-media .social-media__tag:hover .tag__self {
-    color: #00ADB5;
   }
   .intro {
     display: flex;
