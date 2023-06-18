@@ -41,6 +41,7 @@ body {
           border-radius: 50%;
           object-fit: cover;
           object-position: top;
+          transition-delay: 200ms;
         }
       }
     }
@@ -91,6 +92,7 @@ body {
           display: flex;
           align-items: center;
           justify-content: center;
+          transition-delay: 600ms;
 
           .social-media__tag {
             width: 40px;
@@ -323,8 +325,8 @@ body {
             width: 40%;
           }
 
-          .bar__progress[data-progress="65%"] {
-            width: 65%;
+          .bar__progress[data-progress="60%"] {
+            width: 60%;
           }
 
           .bar__progress[data-progress="55%"] {
@@ -653,6 +655,8 @@ body {
   bottom: 0;
   right: 0;
   transform: translate(-50%, -50%);
+  cursor: pointer;
+  display: none;
 
   .arrow__link {
     display: flex;
@@ -681,55 +685,41 @@ body {
   }
 }
 
-.switch {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  transform: translate(50%, -50%);
-  width: 80px;
-  height: 40px;
-  border-radius: 20px;
-  background-color: $gray;
-  cursor: pointer;
-
-  .switch__round {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    background-color: $darkest;
-    border-radius: 50%;
-    top: 50%;
-    right: 0;
-    transform: translate(-5px, -50%);
-  }
-
-  .switch__round--active {
-    left: 0;
-    transform: translate(5px, -50%);
-  }
-
-  .switch__fake {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: #A4A5A6;
-    top: 50%;
-    left: 0;
-    transform: translate(16px, -50%);
-    display: none;
-  }
-
-  .switch__fake--active {
-    display: block;
-  }
+.show-arrow {
+  display: block;
 }
 
-.dark-theme {
-  $dark: #fff;
-  $darker: #FBFBFB;
-  $darkest: #F8F8F8;
+.hidden {
+  opacity: 0;
+  transition: all 2s;
 }
+
+.show {
+  opacity: 1;
+}
+
+//transition-delays
+
+.contact__name {
+  transition-delay: 400ms;
+}
+
+.about__info:nth-child(1) {
+  transition-delay: 400ms;
+}
+
+.about__info:nth-child(2) {
+  transition-delay: 600ms;
+}
+
+.about__info:nth-child(3) {
+  transition-delay: 800ms;
+}
+
+.about__info:nth-child(4) {
+  transition-delay: 1000ms;
+}
+
 
 //media queries
 @media (min-width: 600px) {
@@ -1002,7 +992,7 @@ body {
       }
 
       .information__info {
-        flex: 3;
+        flex: 2;
         padding: 200px 50px 0;
 
         .info__contact {
@@ -1044,7 +1034,7 @@ body {
 
     .intro__paragraph {
       background-color: $darker;
-      flex: 3;
+      flex: 2;
 
       .paragraph__text {
         font-size: 1.5rem;
@@ -1074,8 +1064,9 @@ body {
     }
 
     .expertise__data {
-      flex: 3;
+      flex: 2;
       background-color: $dark;
+
     }
   }
 
@@ -1097,7 +1088,7 @@ body {
 
     .skill__progress {
       background-color: $darker;
-      flex: 3;
+      flex: 2;
     }
   }
 
@@ -1119,7 +1110,7 @@ body {
 
     .experience__data {
       background-color: $dark;
-      flex: 3;
+      flex: 2;
 
       .data__info--last {
 
@@ -1148,7 +1139,7 @@ body {
 
     .education__data {
       background-color: $darker;
-      flex: 3;
+      flex: 2;
     }
   }
 
@@ -1170,7 +1161,7 @@ body {
 
     .profiles__data {
       background-color: $dark;
-      flex: 3;
+      flex: 2;
     }
   }
 
@@ -1192,17 +1183,7 @@ body {
 
     .contact__data {
       background-color: $darker;
-      flex: 3;
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-
-  .profiles {
-
-    .profiles__data {
-
+      flex: 2;
     }
   }
 }

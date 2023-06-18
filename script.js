@@ -1,10 +1,29 @@
-const darkLight = document.querySelector(".switch");
-const round = document.querySelector(".switch__round");
-const fake = document.querySelector(".switch__fake");
+const hiddenElements = document.querySelectorAll(".hidden");
+const arrowUp = document.querySelector('.arrow');
 
-darkLight.addEventListener("click", () => {
-    round.classList.toggle("switch__round--active");
-    fake.classList.toggle("switch__fake--active");
-    document.body.classList.toggle("dark-theme");
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    })
 })
 
+hiddenElements.forEach((el) => observer.observe((el)));
+
+
+arrowUp.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' });
+});
+
+function handleScroll() {
+    if (window.pageYOffset > 500) {
+        arrowUp.classList.add('show-arrow');
+    } else {
+        arrowUp.classList.remove('show-arrow');
+    }
+}
+
+window.addEventListener('scroll', handleScroll);
